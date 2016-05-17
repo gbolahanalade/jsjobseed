@@ -1,0 +1,10 @@
+<form (submit)="addName()">
+  <input [(ngModel)]="searchItem" placeholder="poste, mot clé, entreprise">
+  <input [(ngModel)]="searchPlace" placeholder="ville, département ou code postal">
+  <button type="submit">chercher</button>
+</form>
+
+<h2>Jobs récents</h2>
+<ul>
+  <li *ngFor="let job of jobs">{{job.title}}</li>
+</ul>
